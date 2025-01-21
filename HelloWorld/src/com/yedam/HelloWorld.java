@@ -21,5 +21,6 @@ public class HelloWorld {
 			}
 		}
 		System.out.println("sum의 값은 "+ sum);
+		System.out.println("커밋 푸쉬 테스트");
 	}
 }
