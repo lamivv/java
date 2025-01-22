@@ -44,22 +44,35 @@ public class Todo2 {
 				System.out.println("========================");
 				System.out.println("친구의 이름/전화번호/성별을 입력해주세요");
 				System.out.println("예시 : 땅콩/010-0000-0000/여");
+				String newf = scn.nextLine();
+				String newfsplit = newf.split("/")[0];
+				String yN = ""; // 예/아니오 담을 변수
 				for (int i = 0; i < friendAry.length; i++) {
-					if (friendAry[i] == null) {
-						String newf = scn.nextLine();
-						if (friendAry[i].split("/")[0].equals(newf.split("/")[0])){
+					if (friendAry[i] != null) {
+						if (friendAry[i].split("/")[0].equals(newfsplit)) {
 							System.out.println("동일한 이름의 친구가 이미 있습니다. 추가로 등록하시겠습니까 ?");
 							System.out.println("예/아니오");
-							if ("예".equals(scn.nextLine())) {
-								friendAry[i] = newf;
-								break;
-							}
-						} else {
-							friendAry[i] = newf;
+							yN = scn.nextLine();
+							break;
 						}
 					}
-				}
-				System.out.println("친구가 등록되었습니다");
+				} // 첫번째 for문
+				for (int j = 0; j < friendAry.length; j++) {
+					if (friendAry[j] == null) {
+						if (yN.equals("예")) {
+							friendAry[j] = newf;
+							System.out.println("친구가 등록되었습니다");
+							break;
+						} else if (yN.equals("아니오")) {
+							System.out.println("처음으로 돌아갑니다");
+							break;
+						} else {
+							friendAry[j] = newf;
+							System.out.println("친구가 등록되었습니다");
+							break;
+						}
+					}
+				} // 두번째 for문
 				System.out.println("========================");
 				break;
 			case 3: // 조회(성별)
@@ -123,8 +136,6 @@ public class Todo2 {
 				;
 
 			}
-
 		}
-
 	}
 }
