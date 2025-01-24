@@ -6,6 +6,9 @@ public class Student {
 	int engScore;
 	int mathScore;
 
+	// public, default(기본접근제한자), private => 접근제한자(access modifier)
+	// 기본접근제한자는 같은 패키지 내에서 사용할 수 있음
+	// public은 다른 패키지에서도 접근할 수 있게 해서 사용가능함
 	// 생성자: 필드의 초기값을 지정해서 인스턴스 생성
 	Student() { // 기본 생성자: 매개값이 없는 생성자
 	}
