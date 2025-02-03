@@ -10,8 +10,8 @@ public class Calculator {
 		}
 		System.out.println("\n-----------------------------");
 		// 공백, 말일 계산
-		int blank = 3; // 공백
-		int endDay = 31;
+		int blank = 6; // 공백
+		int endDay = 28;
 		
 		// 공백생성
 		for (int i = 1; i <= endDay; i++) {
