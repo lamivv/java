@@ -1,10 +1,11 @@
 package com.yedam.reference;
-
+ // gender => MEN, WOMEN 두개의 값만 올 수 있도록 지정하는것 .. 열거형 Enum
 public class Student {
 	// 필드(속성을 저장하기 위한) : 이름, 영어점수, 수학점수
-	String studentName;
-	int engScore;
-	int mathScore;
+	private String studentName;
+	private int engScore;
+	private int mathScore;
+	private Gender gender; // 남, 여, 남자, M
 
 	// public, default(기본접근제한자), private => 접근제한자(access modifier)
 	// 기본접근제한자는 같은 패키지 내에서 사용할 수 있음
@@ -36,4 +37,40 @@ public class Student {
 		return (engScore + mathScore) / 2.0;
 	}
 
+	// getter, setter 
+	public String getStudentName() {
+		return studentName;
+	}
+
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
+	}
+
+	public int getEngScore() {
+		return engScore;
+	}
+
+	public void setEngScore(int engScore) {
+		if(engScore < 0) {
+			this.engScore = 0;
+		} else {
+			this.engScore = engScore;
+		}
+	}
+
+	public int getMathScore() {
+		return mathScore;
+	}
+
+	public void setMathScore(int mathScore) {
+		this.mathScore = mathScore;
+	}
+
+	public Gender getGender() {
+		return gender;
+	}
+
+	public void setGender(Gender gender) {
+		this.gender = gender;
+	}
 }
