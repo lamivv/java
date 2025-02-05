@@ -21,7 +21,7 @@ public class Student {
 		this.engScore = engScore;
 	}
 
-	Student(String studentName, int engScore, int mathScore) {
+	public Student(String studentName, int engScore, int mathScore) {
 		this.studentName = studentName;
 		this.engScore = engScore;
 		this.mathScore = mathScore;
@@ -29,7 +29,7 @@ public class Student {
 
 	// 메소드 (기능)
 	void printInfo() { // void : 리턴파일이 없습니다
-		System.out.printf("이름은 %s, 영어점수%d, 수학점수%d\n", studentName, engScore, mathScore);
+		System.out.printf("이름 %3s | 영어점수 %3d | 수학점수 %3d\n", studentName, engScore, mathScore);
 	}
 
 	// 메소드추가 (기능) : 평균을 반환
