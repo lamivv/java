@@ -2,13 +2,17 @@ package com.yedam.api;
 
 public class StringExe {
 	public static void main(String[] args) {
+		for (String parm : args) {
+			System.out.println(parm);
+
+		}
 		// 문제호출
-		연습();
-		no1();
-		no2();
-		no3();
+//		연습();
+//		no1();
+//		no2();
+//		no3();
 	}
-	
+
 	static void 연습() {
 		String str = "hello";
 		String str1 = "world";
@@ -26,8 +30,8 @@ public class StringExe {
 
 	static void no2() {
 		// 파일경로와 파일명
-		String file1 ="C:/temp/flower.jpg";
-		String file2 ="D:/web/prohect/guide.mp3";
+		String file1 = "C:/temp/flower.jpg";
+		String file2 = "D:/web/prohect/guide.mp3";
 		StringUtil.checkExtesion(file1);
 		StringUtil.checkExtesion(file2);
 	}
