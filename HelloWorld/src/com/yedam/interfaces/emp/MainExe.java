@@ -15,7 +15,7 @@ public class MainExe {
 	// 스캐너
 	static Scanner scn = new Scanner(System.in);
 	// 배열, 컬렉션
-	static EmpDAO dao = new EmpListExe();
+	static EmpDAO dao = new EmpDBExe();
 	
 	public static void main(String[] args) {
 		
